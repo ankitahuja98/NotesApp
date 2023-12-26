@@ -1,0 +1,186 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.todo_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #faeed1; */
+}
+/* header starts */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+}
+.header_img {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+/* header ends */
+
+/* input bar starts */
+.inputDiv {
+  margin-top: 5rem;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 0px 10px;
+  margin-bottom: 5rem;
+  width: 23rem;
+}
+.inputDiv input {
+  width: 23rem;
+  height: 2.5rem;
+  margin-right: 1.5rem;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 1.5rem;
+  font-weight: 700;
+  font-size: large;
+}
+.inputDiv i {
+  font-weight: bolder;
+  color: #0000aa;
+  width: 31px;
+  height: 31px;
+  font-size: 30px;
+}
+
+/* input bar ends */
+
+/* display list starts */
+.showlist_heading {
+  width: 27rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+.showlist_heading h3 {
+  font-size: 29px;
+  font-weight: 500;
+  font-family: "Roboto Slab", serif;
+}
+.show_list {
+  height: 6.5rem;
+  border: 2px solid black;
+  border-radius: 07px;
+  margin-bottom: 2rem;
+}
+.show_list p {
+  /* border: 2px solid red; */
+  border-radius: 07px;
+  padding: 10px;
+  overflow: hidden;
+  /* width: 27rem; */
+  height: 4rem;
+  text-align: justify;
+  margin-bottom: 05px;
+}
+.showItem{
+display: flex;
+justify-content: flex-start;
+}
+.show_list i {
+  float: right;
+  font-size: 25px;
+  margin-right: 13px;
+  cursor: pointer;
+}
+.fa-check {
+  color: green;
+}
+.fa-trash {
+  color: red;
+}
+.fa-pen-to-square {
+  color: blue;
+}
+#ongoingBtn {
+  margin-left: 2rem;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+#completedBtn {
+  margin-left: 1rem;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+/* display list ends */
+
+@media (max-width: 450px) {
+  .inputDiv {
+    width: 21rem;
+  }
+  .showlist_heading {
+    display: block;
+  }
+  .showlist_heading h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #ongoingBtn {
+    margin-left: 0.5rem;
+  }
+}
+@media (max-width: 370px) {
+  .inputDiv {
+    width: 17rem;
+  }
+  .inputDiv input{
+    width: 12rem;
+  }
+
+  .showlist_heading {
+    display: block;
+  }
+  .showlist_heading h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #ongoingBtn {
+    margin-left: 0.5rem;
+  }
+}
