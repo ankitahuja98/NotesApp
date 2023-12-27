@@ -95,7 +95,7 @@
 /* display list starts */
 .showlist_heading {
   width: 27rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
 }
 .showlist_heading h3 {
@@ -105,7 +105,8 @@
 }
 .show_list {
   height: 6.5rem;
-  border: 2px solid black;
+  border: 0.1px solid black;
+  box-shadow: inset 3px 3px 10px #534a4a6e;
   border-radius: 07px;
   margin-bottom: 2rem;
 }
@@ -119,9 +120,9 @@
   text-align: justify;
   margin-bottom: 05px;
 }
-.showItem{
-display: flex;
-justify-content: flex-start;
+.showItem {
+  display: flex;
+  justify-content: flex-start;
 }
 .show_list i {
   float: right;
@@ -149,7 +150,7 @@ justify-content: flex-start;
   border: 1px solid black;
 }
 .showitem_p::first-letter {
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 /* display list ends */
 
@@ -157,33 +158,60 @@ justify-content: flex-start;
   .inputDiv {
     width: 21rem;
   }
-  .showlist_heading {
-    display: block;
+  .list_btn {
+    width: 100px !important;
+    height: 40px !important;
   }
   .showlist_heading h3 {
     text-align: center;
-    margin-bottom: 2rem;
   }
   #ongoingBtn {
     margin-left: 0.5rem;
+  }
+}
+@media (max-width: 393px) {
+  .list_btn {
+    width: 90px !important;
+    height: 40px !important;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 373px) {
+  .showlist_heading h3 {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
   }
 }
 @media (max-width: 370px) {
   .inputDiv {
     width: 17rem;
   }
-  .inputDiv input{
+  .inputDiv input {
     width: 12rem;
-  }
-
-  .showlist_heading {
-    display: block;
   }
   .showlist_heading h3 {
     text-align: center;
-    margin-bottom: 2rem;
   }
   #ongoingBtn {
     margin-left: 0.5rem;
+  }
+}
+@media (max-width: 343px) {
+  .list_btn {
+    width: 80px !important;
+    height: 40px !important;
+    font-size: 12px !important;
+  }
+  .showlist_heading h3 {
+    font-size: 19px;
+
+  }
+}
+@media (max-width: 303px) {
+  .showlist_heading h3 {
+    font-size: 14px;
   }
 }

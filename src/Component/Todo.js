@@ -7,6 +7,7 @@ const Todo = () => {
     const [input, setinput] = useState("");
     const [additm, setadditm] = useState([]);
 
+    const [DltAllBtnState, setDltAllBtnState] = useState('none')
     // function Capitalize(str) {
     //     return str.charAt(0).toUpperCase() + str.slice(1);
     // }
@@ -21,6 +22,7 @@ const Todo = () => {
         } else {
             setadditm([input, ...additm]);
             setinput("");
+            setDltAllBtnState('block')
         }
     }
     // delete item function
@@ -32,11 +34,16 @@ const Todo = () => {
         const dltitemarray = additm.filter((value, index) => {
             return (index !== id);
         })
-        setadditm(dltitemarray)
+        setadditm(dltitemarray);
+        // console.log(additm.length-1)
+        if (additm.length === 1) {
+            setDltAllBtnState('none');
+        }
     }
-
+    
     const deleteAll = () => {
         setadditm([])
+        setDltAllBtnState('none');
     }
     return (
         <div className='todo_body'>
@@ -67,14 +74,14 @@ const Todo = () => {
                     <div className="col-12 showItem">
                         <div className='showlist_heading text-start'>
                             <h3>Your's List</h3>
-                            <button id='ongoingBtn' className='btn btn-primary' type='submit' >Ongoing</button>
-                            <button id='completedBtn' className='btn btn-success' type='submit' >Completed</button>
+                            <button id='ongoingBtn' className='btn btn-primary list_btn' type='submit' >Ongoing</button>
+                            <button id='completedBtn' className='btn btn-success list_btn' type='submit' >Completed</button>
                         </div>
                     </div>
                 </div>
                 <div className='row'>
                     <div className="col-12">
-                        <button className='btn btn-danger my-4' onClick={deleteAll}>Delete All</button>
+                        <button className='btn btn-danger my-4' style={{ display: `${DltAllBtnState}` }} onClick={deleteAll}>Delete All</button>
                     </div>
                 </div>
             </div>
