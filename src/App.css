@@ -148,6 +148,9 @@ justify-content: flex-start;
   border-radius: 30px;
   border: 1px solid black;
 }
+.showitem_p::first-letter {
+  text-transform:capitalize;
+}
 /* display list ends */
 
 @media (max-width: 450px) {
