@@ -1,16 +1,28 @@
 import React, { useState } from 'react'
 import headericon from '../Images/Todo_icon.png'
 import Tooltip from '@mui/material/Tooltip';
+import {
+    MDBBtn,
+    MDBModal,
+    MDBModalDialog,
+    MDBModalContent,
+    MDBModalHeader,
+    MDBModalTitle,
+    MDBModalBody,
+    MDBModalFooter,
+} from 'mdb-react-ui-kit';
 
 
 const Todo = () => {
+    const [centredModal, setCentredModal] = useState(false);
     const [input, setinput] = useState("");
     const [additm, setadditm] = useState([]);
 
+    const toggleOpen = () => {
+        setCentredModal(!centredModal);
+    }
+
     const [DltAllBtnState, setDltAllBtnState] = useState('none')
-    // function Capitalize(str) {
-    //     return str.charAt(0).toUpperCase() + str.slice(1);
-    // }
 
     const inputChange = (event) => {
         setinput(event.target.value)
@@ -40,10 +52,11 @@ const Todo = () => {
             setDltAllBtnState('none');
         }
     }
-    
+
     const deleteAll = () => {
         setadditm([])
         setDltAllBtnState('none');
+        toggleOpen();
     }
     return (
         <div className='todo_body'>
@@ -60,7 +73,7 @@ const Todo = () => {
                 <div className="d-flex justify-content-center">
                     <div className='inputDiv d-flex align-items-center'>
                         <input type='text' placeholder='Enter the List Item' value={input} onChange={inputChange} />
-                        <i className="fa-solid fa-plus" onClick={additem} />
+                        <i className="fa-solid fa-plus addicon" onClick={additem} />
                     </div>
                 </div>
             </div>
@@ -81,7 +94,7 @@ const Todo = () => {
                 </div>
                 <div className='row'>
                     <div className="col-12">
-                        <button className='btn btn-danger my-4' style={{ display: `${DltAllBtnState}` }} onClick={deleteAll}>Delete All</button>
+                        <button className='btn btn-danger my-4' style={{ display: `${DltAllBtnState}` }} onClick={toggleOpen}>Delete All</button>
                     </div>
                 </div>
             </div>
@@ -121,10 +134,30 @@ const Todo = () => {
                 </div>
             </div>
             {/* todo list ends */}
-
-
             {/* display todo list ends */}
 
+            {/* delete All Modal start */}
+            <MDBModal tabIndex='-1' open={centredModal} setOpen={setCentredModal}>
+                <MDBModalDialog centered>
+                    <MDBModalContent className='MDBModalContent'>
+                        <MDBModalHeader className='MDBModalHeader'>
+                            <MDBModalTitle className='fw-bolder alert'>Alert!</MDBModalTitle>
+                            <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
+                        </MDBModalHeader>
+                        <MDBModalBody className='MDBModalBody'>
+                            <p className='fw-bolder'>
+                                Are you sure you want to Delete all the items.
+                            </p>
+                        </MDBModalBody>
+                        <MDBModalFooter className='MDBModalFooter'>
+                            <button className='btn btn-danger' onClick={deleteAll}>Delete All</button>
+                        </MDBModalFooter>
+                    </MDBModalContent>
+                </MDBModalDialog>
+            </MDBModal>
+            {/* delete all Modal ends */}
+
+            
 
         </div>
 

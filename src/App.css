@@ -63,6 +63,9 @@
 /* header ends */
 
 /* input bar starts */
+.addicon{
+  cursor: pointer;
+}
 .inputDiv {
   margin-top: 5rem;
   border: 2px solid black;
@@ -105,7 +108,7 @@
 }
 .show_list {
   height: 6.5rem;
-  border: 0.1px solid black;
+  /* border: 0.1px solid black; */
   box-shadow: inset 3px 3px 10px #534a4a6e;
   border-radius: 07px;
   margin-bottom: 2rem;
@@ -153,6 +156,35 @@
   text-transform: capitalize;
 }
 /* display list ends */
+
+/* Delete all Modal Starts */
+.alert {
+  font-size: 1.5rem !important;
+}
+.MDBModalContent {
+  border-radius: 10px !important;
+}
+.MDBModalHeader {
+  height: 4rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 18px !important;
+}
+.MDBModalBody {
+  height: 4rem !important;
+  padding-top: 17px !important;
+  padding-bottom: 17px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.MDBModalFooter {
+  padding-top: 17px !important;
+  padding-bottom: 15px !important;
+  padding-left: 18px !important;
+  padding-right: 13px !important;
+}
+/* Delete all Modal Starts */
 
 @media (max-width: 450px) {
   .inputDiv {
@@ -207,7 +239,6 @@
   }
   .showlist_heading h3 {
     font-size: 19px;
-
   }
 }
 @media (max-width: 303px) {
