@@ -134,13 +134,24 @@
   cursor: pointer;
 }
 .fa-check {
-  color: green;
+  color: white;
+  background-color: green;
+  border-radius: 21px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
 }
 .fa-trash {
   color: red;
 }
 .fa-pen-to-square {
   color: blue;
+}
+.fa-eye{
+  color: indigo;
 }
 #ongoingBtn {
   margin-left: 2rem;
@@ -185,6 +196,18 @@
   padding-right: 13px !important;
 }
 /* Delete all Modal Starts */
+
+.editModal_txtarea{
+  height: 25rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  box-shadow: 0.5px 0.5px 6px #7c7676;
+  border-radius: 5px;
+}
+
+
 
 @media (max-width: 450px) {
   .inputDiv {
@@ -237,12 +260,12 @@
     height: 40px !important;
     font-size: 12px !important;
   }
-  .showlist_heading h3 {
+  /* .showlist_heading h3 {
     font-size: 19px;
-  }
+  } */
 }
-@media (max-width: 303px) {
+/* @media (max-width: 303px) {
   .showlist_heading h3 {
     font-size: 14px;
   }
-}
+} */
