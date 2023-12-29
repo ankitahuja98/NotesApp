@@ -233,7 +233,7 @@ const Todo = () => {
                             ></button>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <textarea className='editModal_txtarea' type="text" value={editModal} onChange={(event) => {
+                            <textarea className='editModal_txtarea' type="text" style={{textAlign:"justify"}} value={editModal} onChange={(event) => {
                                 seteditModal(event.target.value);
                             }}></textarea>
                         </MDBModalBody>
@@ -263,7 +263,7 @@ const Todo = () => {
                                 }}></button>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <p>{view_item}</p>
+                            <p style={{textAlign:"justify"}}>{view_item}</p>
                         </MDBModalBody>
                     </MDBModalContent>
                 </MDBModalDialog>
