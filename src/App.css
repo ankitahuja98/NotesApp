@@ -63,34 +63,57 @@
 /* header ends */
 
 /* input bar starts */
-.addicon{
+.inputdiv_main {
+  background-color: #023047;
+}
+.existing_notes_div {
+  background-color: #d1dce1e6;
+}
+.addicon {
   cursor: pointer;
 }
 .inputDiv {
   margin-top: 5rem;
-  border: 2px solid black;
+  background-color: white;
+  /* border: 2px solid black; */
+  box-shadow: 2px 2px 12px black;
   border-radius: 30px;
   padding: 0px 10px;
   margin-bottom: 5rem;
-  width: 23rem;
 }
-.inputDiv input {
-  width: 23rem;
-  height: 2.5rem;
+.notesinput {
+  margin: 1rem 0rem;
+  height: 9.5rem;
   margin-right: 1.5rem;
   border: none;
-  border-radius: 20px;
   outline: none;
   padding-left: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   font-size: large;
+}
+.title {
+  height: 3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 97%;
+  outline: none;
+  font-size: 25px;
+  font-weight: 700;
+  border: none;
+  border-bottom: 0.5px solid #00000075;
 }
 .inputDiv i {
   font-weight: bolder;
-  color: #0000aa;
-  width: 31px;
-  height: 31px;
-  font-size: 30px;
+  color: white;
+  width: 49px;
+  height: 47px;
+  text-align: center;
+  font-size: 48px;
+  position: relative;
+  left: 74rem;
+  top: 23px;
+  background-color: black;
+  border-radius: 58px;
 }
 
 /* input bar ends */
@@ -98,8 +121,8 @@
 /* display list starts */
 .showlist_heading {
   width: 27rem;
-  margin-bottom: 1rem;
   display: flex;
+  align-items: center;
 }
 .showlist_heading h3 {
   font-size: 29px;
@@ -107,25 +130,46 @@
   font-family: "Roboto Slab", serif;
 }
 .show_list {
-  height: 6.5rem;
+  background-color: white;
+  height: 12.2rem;
   /* border: 0.1px solid black; */
   box-shadow: inset 3px 3px 10px #534a4a6e;
   border-radius: 07px;
   margin-bottom: 2rem;
 }
-.show_list p {
+.showitem_title {
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  width: 90%;
+  margin-left: 1rem;
+  margin-bottom: 0px;
+  height: 4.3rem;
+  overflow: hidden;
+}
+.showitem_p {
   /* border: 2px solid red; */
-  border-radius: 07px;
+  border-radius: 7px;
   padding: 10px;
+  padding-left: 1rem;
   overflow: hidden;
   /* width: 27rem; */
-  height: 4rem;
+  height: 5.5rem;
   text-align: justify;
-  margin-bottom: 05px;
+  margin-bottom: 5px;
 }
 .showItem {
   display: flex;
   justify-content: flex-start;
+}
+.DltAllBtn {
+  width: 54rem;
+  display: flex;
+  justify-content: flex-end;
 }
 .show_list i {
   float: right;
@@ -150,7 +194,7 @@
 .fa-pen-to-square {
   color: blue;
 }
-.fa-eye{
+.fa-eye {
   color: indigo;
 }
 #ongoingBtn {
@@ -169,45 +213,100 @@
 /* display list ends */
 
 /* Delete all Modal Starts */
-.alert {
+.alert_DltAll {
   font-size: 1.5rem !important;
+  color: #ac1a1a;
 }
-.MDBModalContent {
+.MDBModalContent_DltAll {
   border-radius: 10px !important;
 }
-.MDBModalHeader {
-  height: 4rem !important;
+.MDBModalHeader_DltAll {
+  height: 3rem !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  padding-left: 0px !important;
+  padding-left: 18px !important;
   padding-right: 18px !important;
 }
-.MDBModalBody {
-  height: 4rem !important;
-  padding-top: 17px !important;
+.MDBModalBody_DltAll {
+  height: 2rem !important;
+  padding-top: 0px !important;
   padding-bottom: 17px !important;
   padding-left: 18px !important;
   padding-right: 18px !important;
 }
-.MDBModalFooter {
+.MDBModalFooter_DltAll {
   padding-top: 17px !important;
   padding-bottom: 15px !important;
   padding-left: 18px !important;
   padding-right: 13px !important;
 }
-/* Delete all Modal Starts */
+/* Delete all Modal ends */
 
-.editModal_txtarea{
+/* view Modal Starts */
+.MDBModalHeader_view {
+  height: 3rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 18px !important;
+}
+.MDBModalBody_view {
+  height: 35rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 17px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.MDBModalBody_title {
+  font-size: 25px !important;
+}
+/* view Modal ends */
+/* edit Modal Starts */
+.editModal_txtarea_title {
+  height: 6rem;
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0rem 1rem;
+  /* box-shadow: 0.5px 0.5px 6px #7c7676; */
+  /* border-radius: 5px; */
+}
+/* scroll changes start */
+.editModal_txtarea_title::-webkit-scrollbar {
+  width: 05px;
+}
+.editModal_txtarea_title::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.editModal_txtarea_title::-webkit-scrollbar-thumb {
+  background-color: rgb(21, 0, 255);
+  outline: 1px solid slategrey;
+}
+/* scroll changes ends */
+
+.editModal_txtarea_content {
   height: 25rem;
   width: 100%;
   border: none;
   outline: none;
   padding: 1rem;
-  box-shadow: 0.5px 0.5px 6px #7c7676;
-  border-radius: 5px;
+  padding-top: 0px;
+  /* box-shadow: 0.5px 0.5px 6px #7c7676;
+  border-radius: 5px; */
 }
-
-
+.editModal_txtarea_content::-webkit-scrollbar {
+  width: 05px;
+}
+.editModal_txtarea_content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.editModal_txtarea_content::-webkit-scrollbar-thumb {
+  background-color: rgb(21, 0, 255);
+  outline: 1px solid slategrey;
+}
+/* edit Modal Starts */
 
 @media (max-width: 450px) {
   .inputDiv {
@@ -244,7 +343,7 @@
   .inputDiv {
     width: 17rem;
   }
-  .inputDiv input {
+  .notesinput {
     width: 12rem;
   }
   .showlist_heading h3 {
