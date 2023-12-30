@@ -60,9 +60,14 @@ const Todo = () => {
     }
 
     const additem = () => {
-        if (input === "") {
-            alert("Please Enter the List Item");
-        } else {
+        if (input.title === "" && input.content === "") {
+            alert("Please Enter Title and Note");
+        } else if (input.title === "") {
+            alert("Please Enter Title");
+        } else if (input.content === "") {
+            alert("Please Enter Note");
+        }
+        else {
             // jab input ko empty array mai store krwa rha hu tab uske sath uski ek id bhi store krwa rha hu
             const addallitem = { id: new Date().getTime().toString(), title: input.title, content: input.content }
             // new input ke sath sath usme jo bhi store data hai usse bhi le rha hu ...additm krke 
