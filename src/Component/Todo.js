@@ -23,10 +23,6 @@ const Todo = () => {
     });
     const [additm, setadditm] = useState([]);
     const [DltAllBtnState, setDltAllBtnState] = useState('none');
-    const [comple_Btn, setcomple_Btn] = useState({
-        color: "grey",
-        backgroundColor: "white"
-    })
     const [yourlist_heading, setyourlist_heading] = useState("none");
     const [editModal, seteditModal] = useState({
         title: "",
@@ -212,14 +208,6 @@ const Todo = () => {
                                             <p className='showitem_title'>{value.title}</p>
                                             <p className='showitem_p'>{value.content}</p>
                                         </div>
-                                        <Tooltip title="Mark as Completed">
-                                            <i className="fa-solid fa-check" style={{ color: `${comple_Btn.color}`, backgroundColor: `${comple_Btn.backgroundColor}` }} onClick={() => {
-                                                setcomple_Btn({
-                                                    color: "white",
-                                                    backgroundColor: "green"
-                                                });
-                                            }}></i>
-                                        </Tooltip>
                                         <Tooltip title="Delete">
                                             <i className="fa-solid fa-trash" onClick={() => deleteItem(value.id)}></i>
                                         </Tooltip>
