@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/NotesApp/static/css/main.3c338775.css",
-    "main.js": "/NotesApp/static/js/main.1b0e992c.js",
-    "static/js/787.8eb42f38.chunk.js": "/NotesApp/static/js/787.8eb42f38.chunk.js",
+    "main.js": "/NotesApp/static/js/main.c0033322.js",
+    "static/js/787.a16c65e5.chunk.js": "/NotesApp/static/js/787.a16c65e5.chunk.js",
     "static/media/Todo_icon.png": "/NotesApp/static/media/Todo_icon.eec329d262e7102b347b.png",
     "index.html": "/NotesApp/index.html",
     "main.3c338775.css.map": "/NotesApp/static/css/main.3c338775.css.map",
-    "main.1b0e992c.js.map": "/NotesApp/static/js/main.1b0e992c.js.map",
-    "787.8eb42f38.chunk.js.map": "/NotesApp/static/js/787.8eb42f38.chunk.js.map"
+    "main.c0033322.js.map": "/NotesApp/static/js/main.c0033322.js.map",
+    "787.a16c65e5.chunk.js.map": "/NotesApp/static/js/787.a16c65e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c338775.css",
-    "static/js/main.1b0e992c.js"
+    "static/js/main.c0033322.js"
   ]
 }
