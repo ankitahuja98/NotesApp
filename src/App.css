@@ -108,6 +108,7 @@
   justify-content:flex-end;
 }
 .inputDiv i {
+  box-shadow: 1px 1px 8px whitesmoke;
   font-weight: bolder;
   color: white;
   width: 49px;
