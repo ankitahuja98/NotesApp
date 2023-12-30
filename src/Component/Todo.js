@@ -28,6 +28,7 @@ const Todo = () => {
         title: "",
         content: ""
     });
+
     const [edit_Id, setedit_Id] = useState(null);
     const [view_item, setview_item] = useState({
         title: "",
@@ -79,7 +80,6 @@ const Todo = () => {
             });
             setDltAllBtnState('block')
             setyourlist_heading('block')
-
         }
     }
 
@@ -133,6 +133,10 @@ const Todo = () => {
 
         setScrollableModal(!setScrollableModal)
         setedit_Id(null)
+        seteditModal({
+            title: "",
+            content: ""
+        })
     }
     const view_Item = (value) => {
         setview_item({
@@ -272,7 +276,13 @@ const Todo = () => {
                             <button
                                 className='btn-close'
                                 color='none'
-                                onClick={() => setScrollableModal(!scrollableModal)}
+                                onClick={() => {
+                                    setScrollableModal(!scrollableModal);
+                                    seteditModal({
+                                        title: "",
+                                        content: ""
+                                    });
+                                }}
                             ></button>
                         </MDBModalHeader>
                         <MDBModalBody>
@@ -282,7 +292,13 @@ const Todo = () => {
                             <textarea className='editModal_txtarea_content' type="text" style={{ textAlign: "justify" }} name='content' value={editModal.content} onChange={edit_onchange}></textarea>
                         </MDBModalBody>
                         <MDBModalFooter>
-                            <button className='btn btn-secondary' color='secondary' onClick={() => setScrollableModal(!setScrollableModal)}>
+                            <button className='btn btn-secondary' color='secondary' onClick={() => {
+                                    setScrollableModal(!scrollableModal);
+                                    seteditModal({
+                                        title: "",
+                                        content: ""
+                                    });
+                                }}>
                                 Close
                             </button>
                             <button className='btn btn-primary' onClick={update_item}>Update Item</button>
