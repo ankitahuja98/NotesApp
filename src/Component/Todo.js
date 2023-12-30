@@ -159,9 +159,18 @@ const Todo = () => {
                         <div className='inputDiv col-12 d-flex flex-column justify-content-center'>
                             <input className='title' type='text' placeholder='Title' name="title" value={input.title} onChange={inputChange}></input>
                             <textarea className='notesinput' row='5' type='text' name="content" placeholder='Enter the Note' value={input.content} onChange={inputChange} />
-                            <Tooltip title="Add Item">
-                                <i className="fa-solid fa-plus addicon" onClick={additem} />
-                            </Tooltip>
+
+
+                            <div className="col-12">
+                                <div className='additmDiv'>
+                                    <Tooltip title="Add Item">
+                                        <i className="fa-solid fa-plus addicon" onClick={additem} />
+                                    </Tooltip>
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -274,9 +283,9 @@ const Todo = () => {
                             ></button>
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <h2 style={{paddingLeft:'1rem' , color:'#090986'}}>Title</h2>
+                            <h2 style={{ paddingLeft: '1rem', color: '#090986' }}>Title</h2>
                             <textarea className='editModal_txtarea_title' type="text" style={{ textAlign: "justify" }} name='title' value={editModal.title} onChange={edit_onchange}></textarea>
-                            <h2 className='mt-5' style={{paddingLeft:'1rem' , color:'#090986'}}>Note</h2>
+                            <h2 className='mt-5' style={{ paddingLeft: '1rem', color: '#090986' }}>Note</h2>
                             <textarea className='editModal_txtarea_content' type="text" style={{ textAlign: "justify" }} name='content' value={editModal.content} onChange={edit_onchange}></textarea>
                         </MDBModalBody>
                         <MDBModalFooter>

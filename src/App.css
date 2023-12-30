@@ -102,6 +102,11 @@
   border: none;
   border-bottom: 0.5px solid #00000075;
 }
+.additmDiv{
+  width: 95%;
+  display: flex;
+  justify-content:flex-end;
+}
 .inputDiv i {
   font-weight: bolder;
   color: white;
@@ -110,7 +115,7 @@
   text-align: center;
   font-size: 48px;
   position: relative;
-  left: 74rem;
+  /* left: 74rem; */
   top: 23px;
   background-color: black;
   border-radius: 58px;
@@ -308,6 +313,11 @@
 }
 /* edit Modal Starts */
 
+@media (max-width:539px){
+  .DltAllBtn{
+    width: 18rem;
+  }
+}
 @media (max-width: 450px) {
   .inputDiv {
     width: 21rem;
@@ -333,9 +343,11 @@
 @media (max-width: 373px) {
   .showlist_heading h3 {
     font-size: 23px;
-    display: flex;
+    position: relative;
+    top: 7px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 38px;
   }
 }
@@ -359,12 +371,5 @@
     height: 40px !important;
     font-size: 12px !important;
   }
-  /* .showlist_heading h3 {
-    font-size: 19px;
-  } */
 }
-/* @media (max-width: 303px) {
-  .showlist_heading h3 {
-    font-size: 14px;
-  }
-} */
+
